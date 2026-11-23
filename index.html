@@ -1,0 +1,1227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玩物社区女王 - 官方视频门户 | 玩物社区女王品牌官方网站</title>
+<meta name="description" content="玩物社区女王官方网站，专注潮流玩物与收藏文化的原创高清视频内容平台，汇聚专业创作者与企业品牌，共建值得信赖的玩物内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1533'/%3E%3Cpath d='M32 12l5.6 13.4L52 27l-11 9.6L44 51 32 43.4 20 51l3-14.4L12 27l14.4-1.6z' fill='%23ffcf4d'/%3E%3C/svg%3E">
+<style>
+:root{
+  --wq-ink:#1b1533;
+  --wq-ink-2:#2a2347;
+  --wq-paper:#f6f4fb;
+  --wq-card:#ffffff;
+  --wq-line:#e3dff0;
+  --wq-mute:#6c6585;
+  --wq-gold:#e8b64b;
+  --wq-gold-deep:#c2902a;
+  --wq-violet:#7a5cf0;
+  --wq-mint:#38c9a5;
+  --wq-radius:16px;
+  --wq-shadow:0 10px 30px rgba(27,21,51,.08);
+  --wq-header-h:112px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--wq-ink);
+  background:var(--wq-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;letter-spacing:.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+section{scroll-margin-top:calc(var(--wq-header-h) + 14px)}
+
+/* ---------- sticky stack ---------- */
+.wq-sticky-stack{
+  position:sticky;
+  top:0;
+  z-index:80;
+  box-shadow:0 2px 12px rgba(27,21,51,.06);
+}
+.wq-announce-bar{
+  background:linear-gradient(90deg,var(--wq-ink) 0%,var(--wq-ink-2) 55%,#3c2f6b 100%);
+  color:#f2eefc;
+  font-size:13.5px;
+  padding:9px 18px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.wq-announce-bar .wq-announce-tag{
+  background:var(--wq-gold);
+  color:var(--wq-ink);
+  font-weight:800;
+  font-size:12px;
+  padding:2px 9px;
+  border-radius:999px;
+  letter-spacing:.06em;
+  flex-shrink:0;
+}
+.wq-announce-bar .wq-announce-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.wq-announce-bar .wq-announce-links a{opacity:.92;border-bottom:1px dashed rgba(255,255,255,.35)}
+.wq-announce-bar .wq-announce-links a:hover{opacity:1;border-bottom-color:var(--wq-gold)}
+
+/* ---------- header ---------- */
+.wq-site-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--wq-line);
+}
+.wq-header-inner{
+  max-width:1220px;
+  margin:0 auto;
+  padding:12px 22px;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.wq-brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  flex-shrink:0;
+}
+.wq-brand-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(145deg,var(--wq-ink),#4a3b86);
+  display:grid;place-items:center;
+  color:var(--wq-gold);font-weight:900;font-size:19px;
+  box-shadow:inset 0 0 0 2px rgba(232,182,75,.35);
+}
+.wq-brand-name{font-size:18px;font-weight:900;line-height:1.2}
+.wq-brand-sub{font-size:11.5px;color:var(--wq-mute);letter-spacing:.18em}
+.wq-nav{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.wq-nav a{
+  padding:8px 13px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--wq-ink-2);
+  transition:background .2s,color .2s;
+}
+.wq-nav a:hover{background:#f0ecfb;color:var(--wq-violet)}
+.wq-header-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.wq-search{
+  display:flex;align-items:center;gap:7px;
+  background:#f2effb;border:1px solid var(--wq-line);
+  border-radius:999px;padding:6px 13px;
+}
+.wq-search input{
+  border:none;background:transparent;outline:none;font-size:14px;width:150px;color:var(--wq-ink);
+}
+.wq-search input::placeholder{color:#a49dbd}
+.wq-search button{font-size:14px;color:var(--wq-violet);font-weight:700}
+.wq-btn{
+  display:inline-flex;align-items:center;gap:7px;justify-content:center;
+  padding:9px 18px;border-radius:999px;font-size:14px;font-weight:700;
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.wq-btn:hover{transform:translateY(-2px)}
+.wq-btn-primary{background:var(--wq-ink);color:#fff;box-shadow:0 6px 18px rgba(27,21,51,.24)}
+.wq-btn-primary:hover{background:#2e2551}
+.wq-btn-gold{background:linear-gradient(135deg,var(--wq-gold),#f3cf70);color:var(--wq-ink);box-shadow:0 6px 18px rgba(232,182,75,.35)}
+.wq-btn-ghost{background:#fff;border:1.5px solid var(--wq-line);color:var(--wq-ink-2)}
+.wq-btn-ghost:hover{border-color:var(--wq-violet);color:var(--wq-violet)}
+.wq-nav-toggle{
+  display:none;width:42px;height:42px;border-radius:11px;
+  background:#f2effb;font-size:19px;
+}
+.wq-search-tip{
+  max-width:1220px;margin:0 auto;padding:0 22px;
+}
+.wq-search-tip p{
+  font-size:13px;color:var(--wq-violet);font-weight:600;
+  background:#efeafd;border-radius:0 0 12px 12px;padding:7px 14px;display:none;
+}
+.wq-search-tip.is-on p{display:block}
+
+/* ---------- hero ---------- */
+.wq-hero{
+  max-width:1220px;margin:0 auto;padding:38px 22px 10px;
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:42px;align-items:center;
+}
+.wq-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12.5px;font-weight:800;letter-spacing:.14em;color:var(--wq-gold-deep);
+  background:#fdf5e2;border:1px solid #f3e2b8;padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+.wq-hero h1{
+  font-size:clamp(34px,4.6vw,56px);
+  letter-spacing:.01em;
+  line-height:1.12;
+}
+.wq-hero h1 .wq-h1-accent{
+  display:block;font-size:.42em;letter-spacing:.32em;color:var(--wq-violet);
+  font-weight:800;margin-bottom:8px;
+}
+.wq-hero-lead{
+  margin-top:20px;font-size:16px;color:#463e63;max-width:52ch;
+}
+.wq-hero-metrics{
+  display:flex;gap:28px;margin-top:26px;flex-wrap:wrap;
+}
+.wq-hero-metrics div{min-width:92px}
+.wq-hero-metrics b{display:block;font-size:25px;color:var(--wq-ink);letter-spacing:.02em}
+.wq-hero-metrics span{font-size:12.5px;color:var(--wq-mute)}
+.wq-hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.wq-hero-visual{position:relative}
+.wq-hero-frame{
+  border-radius:24px;overflow:hidden;box-shadow:0 26px 60px rgba(27,21,51,.24);
+  border:1px solid rgba(255,255,255,.6);background:#0f0c1f;
+}
+.wq-hero-frame svg{display:block;width:100%;height:auto}
+.wq-hero-badge{
+  position:absolute;left:-14px;bottom:26px;
+  background:#fff;border-radius:14px;padding:11px 16px;
+  box-shadow:var(--wq-shadow);border:1px solid var(--wq-line);
+  display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;
+}
+.wq-hero-badge .wq-dot{width:9px;height:9px;border-radius:50%;background:var(--wq-mint);box-shadow:0 0 0 4px rgba(56,201,165,.2)}
+
+/* ---------- layout helpers ---------- */
+.wq-wrap{max-width:1220px;margin:0 auto;padding:0 22px}
+.wq-section{padding:52px 0 12px}
+.wq-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:26px;flex-wrap:wrap}
+.wq-section-head h2{font-size:clamp(23px,2.6vw,31px)}
+.wq-section-head .wq-kicker{
+  display:block;font-size:12px;font-weight:800;letter-spacing:.22em;color:var(--wq-gold-deep);margin-bottom:8px;
+}
+.wq-section-head p{font-size:14px;color:var(--wq-mute);max-width:52ch;margin-top:8px}
+.wq-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.wq-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.wq-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.wq-card{
+  background:var(--wq-card);border:1px solid var(--wq-line);border-radius:var(--wq-radius);
+  padding:22px;box-shadow:0 4px 14px rgba(27,21,51,.04);transition:transform .22s,box-shadow .22s;
+}
+.wq-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(27,21,51,.1)}
+.wq-tag{
+  display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+  background:#efeafd;color:var(--wq-violet);margin-right:6px;margin-bottom:6px;
+}
+.wq-tag-gold{background:#fdf3da;color:#a8791b}
+.wq-tag-mint{background:#e2f8f2;color:#187a61}
+
+/* ---------- feature video ---------- */
+.wq-feature{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px;align-items:stretch;margin-bottom:26px}
+.wq-feature-cover{
+  border-radius:20px;overflow:hidden;position:relative;background:#100d21;
+  box-shadow:0 18px 42px rgba(27,21,51,.2);
+}
+.wq-feature-cover svg{display:block;width:100%;height:auto}
+.wq-play-badge{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:62px;height:62px;border-radius:50%;
+  background:rgba(255,255,255,.92);display:grid;place-items:center;
+  color:var(--wq-ink);font-size:20px;box-shadow:0 8px 26px rgba(0,0,0,.35);
+}
+.wq-feature-body{display:flex;flex-direction:column;justify-content:center;gap:14px}
+.wq-feature-body h3{font-size:clamp(20px,2.2vw,26px)}
+.wq-feature-body p{color:#4b4468;font-size:14.5px}
+.wq-meta-row{display:flex;gap:16px;font-size:12.5px;color:var(--wq-mute);flex-wrap:wrap}
+.wq-meta-row b{color:var(--wq-ink)}
+
+/* ---------- video list ---------- */
+.wq-vlist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--wq-line)}
+.wq-vitem{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;
+  padding:18px 6px;border-bottom:1px solid var(--wq-line);
+}
+.wq-vitem:hover{background:#faf8ff}
+.wq-vitem h4{font-size:16px;margin-bottom:5px}
+.wq-vitem p{font-size:13.5px;color:var(--wq-mute)}
+.wq-vitem-index{
+  font-size:13px;font-weight:900;color:var(--wq-gold-deep);letter-spacing:.1em;flex-shrink:0;
+}
+.wq-vitem-tail{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.wq-act{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--wq-mute);
+  padding:5px 10px;border-radius:999px;border:1px solid var(--wq-line);background:#fff;
+  transition:all .18s;
+}
+.wq-act:hover{border-color:var(--wq-violet);color:var(--wq-violet)}
+.wq-act.is-liked{background:#fdf0f4;border-color:#f4b8ce;color:#c8325f}
+.wq-act.is-saved{background:#fdf6e3;border-color:#f0d79a;color:#a8791b}
+.wq-thumb{
+  width:150px;flex-shrink:0;border-radius:12px;overflow:hidden;border:1px solid var(--wq-line);
+}
+.wq-thumb svg{display:block;width:100%;height:auto}
+
+/* ---------- topic / brand story ---------- */
+.wq-topic-band{
+  background:linear-gradient(140deg,#1b1533,#332a5c 60%,#453a7c);
+  border-radius:24px;color:#f3efff;padding:38px;position:relative;overflow:hidden;
+}
+.wq-topic-band::after{
+  content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,182,75,.35),transparent 68%);
+}
+.wq-topic-band h2{color:#fff;font-size:clamp(22px,2.5vw,30px);position:relative;z-index:2}
+.wq-topic-band > p{color:#cec6e8;margin-top:12px;max-width:66ch;position:relative;z-index:2;font-size:14.5px}
+.wq-topic-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;position:relative;z-index:2}
+.wq-topic-list article{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;padding:18px;
+}
+.wq-topic-list h3{font-size:16.5px;color:#fff;margin-bottom:8px}
+.wq-topic-list p{font-size:13px;color:#c6bee0}
+.wq-topic-list ul{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.wq-topic-list li{font-size:12.5px;color:#ded7f4;padding-left:14px;position:relative}
+.wq-topic-list li::before{content:"›";position:absolute;left:0;color:var(--wq-gold)}
+
+/* ---------- editors ---------- */
+.wq-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.wq-author{
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;
+  background:#fff;border:1px solid var(--wq-line);border-radius:16px;padding:20px;
+  transition:transform .22s,box-shadow .22s;
+}
+.wq-author:hover{transform:translateY(-3px);box-shadow:var(--wq-shadow)}
+.wq-avatar{
+  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  font-weight:900;font-size:19px;color:#fff;flex-shrink:0;
+}
+.wq-author h3{font-size:16.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wq-author .wq-author-role{font-size:12px;font-weight:700;color:var(--wq-violet);background:#efeafd;padding:2px 9px;border-radius:999px}
+.wq-author p{font-size:13px;color:var(--wq-mute);margin-top:7px}
+.wq-author-stats{display:flex;gap:14px;margin-top:10px;font-size:12px;color:var(--wq-mute);flex-wrap:wrap}
+.wq-author-stats b{color:var(--wq-ink)}
+.wq-author-more{font-size:12.5px;font-weight:700;color:var(--wq-violet);margin-top:10px;display:inline-block}
+.wq-author-more:hover{text-decoration:underline}
+
+/* ---------- deep analysis ---------- */
+.wq-essay{
+  background:#fff;border:1px solid var(--wq-line);border-radius:22px;padding:34px 38px;
+  box-shadow:0 6px 20px rgba(27,21,51,.05);
+}
+.wq-essay h2{margin-bottom:8px}
+.wq-essay > p{color:#4b4468;font-size:15px;margin-bottom:14px}
+.wq-essay h3{font-size:18px;margin:26px 0 10px;padding-left:14px;border-left:4px solid var(--wq-gold)}
+.wq-essay p{font-size:14.5px;color:#47405f;margin-bottom:12px}
+.wq-essay .wq-quote{
+  background:#faf7ff;border-left:4px solid var(--wq-violet);border-radius:0 12px 12px 0;
+  padding:14px 18px;font-size:14px;color:#463f66;margin:18px 0;
+}
+
+/* ---------- reviews ---------- */
+.wq-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.wq-review{
+  background:#fff;border:1px solid var(--wq-line);border-radius:14px;padding:18px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.wq-review-head{display:flex;align-items:center;gap:10px}
+.wq-review-name{font-size:14px;font-weight:800}
+.wq-review-stars{color:var(--wq-gold-deep);font-size:13px;letter-spacing:1px}
+.wq-review p{font-size:13.5px;color:#524b6b}
+.wq-review .wq-review-topic{font-size:12px;color:var(--wq-mute);margin-top:2px}
+
+/* ---------- faq ---------- */
+.wq-faq{display:flex;flex-direction:column;gap:12px}
+.wq-faq details{
+  background:#fff;border:1px solid var(--wq-line);border-radius:13px;padding:0 18px;
+  transition:border-color .2s;
+}
+.wq-faq details[open]{border-color:#cbbcfa}
+.wq-faq summary{
+  list-style:none;cursor:pointer;padding:16px 0;font-weight:800;font-size:15px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.wq-faq summary::-webkit-details-marker{display:none}
+.wq-faq summary::after{content:"+";font-size:20px;color:var(--wq-violet);font-weight:400;line-height:1}
+.wq-faq details[open] summary::after{content:"–"}
+.wq-faq details p{padding:0 0 16px;font-size:14px;color:#4b4468}
+
+/* ---------- partners / dynamics ---------- */
+.wq-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.wq-partner{
+  background:#fff;border:1px solid var(--wq-line);border-radius:14px;padding:18px 16px;
+  display:flex;align-items:center;gap:12px;
+}
+.wq-partner .wq-partner-logo{
+  width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-weight:900;color:#fff;font-size:15px;flex-shrink:0;
+}
+.wq-partner b{font-size:14px;display:block}
+.wq-partner span{font-size:12px;color:var(--wq-mute)}
+.wq-log{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--wq-line);margin-left:8px}
+.wq-log li{padding:0 0 20px 22px;position:relative}
+.wq-log li::before{
+  content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--wq-gold);border:3px solid var(--wq-paper);
+}
+.wq-log b{font-size:14.5px;display:block}
+.wq-log span{font-size:12px;color:var(--wq-mute)}
+.wq-log p{font-size:13.5px;color:#524b6b;margin-top:4px}
+
+/* ---------- footer ---------- */
+.wq-footer{
+  background:var(--wq-ink);color:#c9c2e2;margin-top:56px;padding:48px 0 26px;
+}
+.wq-footer-inner{max-width:1220px;margin:0 auto;padding:0 22px}
+.wq-footer-top{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:34px}
+.wq-footer-brand .wq-brand-name{color:#fff}
+.wq-footer-brand p{font-size:13.5px;margin-top:14px;max-width:36ch;color:#a89fc9}
+.wq-footer h4{font-size:13px;letter-spacing:.14em;color:#fff;margin-bottom:14px}
+.wq-footer ul{display:flex;flex-direction:column;gap:9px}
+.wq-footer a{font-size:13.5px;color:#b7aed6}
+.wq-footer a:hover{color:var(--wq-gold)}
+.wq-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-top:20px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#8f86b0;
+}
+
+/* ---------- toast & modal ---------- */
+.wq-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--wq-ink);color:#fff;padding:11px 22px;border-radius:999px;font-size:13.5px;font-weight:700;
+  opacity:0;pointer-events:none;transition:all .3s;z-index:200;box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.wq-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.wq-modal{
+  position:fixed;inset:0;background:rgba(15,12,31,.55);display:none;place-items:center;padding:22px;z-index:210;
+}
+.wq-modal.is-on{display:grid}
+.wq-modal-box{
+  background:#fff;border-radius:20px;max-width:480px;width:100%;padding:28px;position:relative;
+  box-shadow:0 30px 70px rgba(0,0,0,.35);max-height:86vh;overflow:auto;
+}
+.wq-modal-box h3{font-size:20px;margin-bottom:10px}
+.wq-modal-box p{font-size:14px;color:#4b4468;margin-bottom:16px}
+.wq-modal-close{position:absolute;right:14px;top:12px;font-size:20px;color:var(--wq-mute);width:32px;height:32px;border-radius:50%}
+.wq-modal-close:hover{background:#f2effb}
+.wq-modal-box label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}
+.wq-modal-box input,.wq-modal-box textarea{
+  width:100%;border:1px solid var(--wq-line);border-radius:10px;padding:10px 12px;font-family:inherit;font-size:14px;outline:none;
+}
+.wq-modal-box input:focus,.wq-modal-box textarea:focus{border-color:var(--wq-violet)}
+.wq-modal-box textarea{min-height:92px;resize:vertical}
+.wq-submit-btn{width:100%;margin-top:18px;padding:12px;border-radius:12px;background:var(--wq-ink);color:#fff;font-weight:800;font-size:15px}
+.wq-submit-btn:hover{background:#2e2551}
+
+/* ---------- back to top ---------- */
+.wq-top-btn{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--wq-ink);color:#fff;font-size:18px;display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(27,21,51,.3);opacity:0;pointer-events:none;transition:all .25s;z-index:90;
+}
+.wq-top-btn.is-on{opacity:1;pointer-events:auto}
+.wq-top-btn:hover{background:var(--wq-violet)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .wq-hero{grid-template-columns:1fr;gap:30px}
+  .wq-feature{grid-template-columns:1fr}
+  .wq-topic-list{grid-template-columns:1fr}
+  .wq-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wq-grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wq-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wq-footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .wq-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--wq-line);
+    flex-direction:column;padding:12px 18px 18px;gap:2px;
+    box-shadow:0 18px 30px rgba(27,21,51,.12);
+  }
+  .wq-nav.is-open{display:flex}
+  .wq-header-inner{position:relative;flex-wrap:wrap}
+  .wq-nav-toggle{display:grid;place-items:center;order:3}
+  .wq-header-tools{order:4;width:100%;justify-content:space-between;margin-top:6px}
+  .wq-search input{width:100%}
+  .wq-search{flex:1}
+  .wq-header-tools .wq-btn{padding:8px 14px;font-size:13px}
+}
+@media (max-width:760px){
+  :root{--wq-header-h:150px}
+  .wq-hero{padding-top:26px}
+  .wq-grid-3,.wq-grid-2,.wq-grid-4,.wq-author-grid,.wq-review-grid{grid-template-columns:1fr}
+  .wq-essay{padding:24px 20px}
+  .wq-topic-band{padding:26px 20px}
+  .wq-footer-top{grid-template-columns:1fr}
+  .wq-vitem{grid-template-columns:1fr}
+  .wq-vitem-tail{justify-content:flex-start;flex-wrap:wrap}
+  .wq-thumb{width:100%}
+  .wq-hero-badge{left:10px;bottom:10px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="wq-sticky-stack">
+  <div class="wq-announce-bar" role="region" aria-label="站内公告">
+    <span class="wq-announce-tag">官方发布</span>
+    <div class="wq-announce-links">
+      <a href="#wq-feature">《玩物藏家的十二时辰》第 8 集上线，首发 4K 高清版</a>
+      <a href="#wq-review">2026 年度“玩物口碑榜”投票开启，12 月 5 日截止</a>
+      <a href="#wq-topic">女王创作挑战赛第三季报名通道开放</a>
+    </div>
+  </div>
+  <header class="wq-site-header">
+    <div class="wq-header-inner">
+      <a class="wq-brand" href="#wq-hero">
+        <span class="wq-brand-mark">玩</span>
+        <span>
+          <span class="wq-brand-name">玩物社区女王</span>
+          <span class="wq-brand-sub">OFFICIAL VIDEO</span>
+        </span>
+      </a>
+      <nav class="wq-nav" id="wqNav" aria-label="主导航">
+        <a href="#wq-feature">精选视频</a>
+        <a href="#wq-topic">专题企划</a>
+        <a href="#wq-authors">创作者</a>
+        <a href="#wq-essay">品牌解析</a>
+        <a href="#wq-review">用户口碑</a>
+        <a href="#wq-faq">帮助中心</a>
+      </nav>
+      <div class="wq-header-tools">
+        <form class="wq-search" id="wqSearchForm" role="search">
+          <input type="search" id="wqSearchInput" placeholder="搜索玩物 / 创作者 / 专题" aria-label="站内搜索">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="wq-btn wq-btn-gold" data-modal="wqSubmitModal">投稿入口</button>
+      </div>
+      <button class="wq-nav-toggle" id="wqNavToggle" aria-label="展开导航" aria-expanded="false">☰</button>
+    </div>
+    <div class="wq-search-tip" id="wqSearchTip"><p></p></div>
+  </header>
+</div>
+
+<main>
+
+  <section class="wq-hero" id="wq-hero">
+    <div class="wq-hero-copy">
+      <span class="wq-hero-eyebrow">官方网站 · 品牌视频门户</span>
+      <h1><span class="wq-h1-accent">PLAYFUL QUEEN</span>玩物社区女王</h1>
+      <p class="wq-hero-lead">作为深耕潮流玩物与收藏文化领域的视频品牌，我们为藏家、手作人与设计师搭建高品质内容生态，用原创正版的高清影像记录每一次开箱、拆解与重逢，让玩物背后的真实故事被看见。</p>
+      <div class="wq-hero-metrics">
+        <div><b>1,286</b><span>原创高清视频</span></div>
+        <div><b>52.4 万</b><span>社区注册用户</span></div>
+        <div><b>138 位</b><span>签约创作者</span></div>
+      </div>
+      <div class="wq-hero-actions">
+        <a class="wq-btn wq-btn-primary" href="#wq-feature">▶ 观看本期精选</a>
+        <a class="wq-btn wq-btn-ghost" href="#wq-authors">创作者矩阵</a>
+        <button class="wq-btn wq-btn-ghost" data-modal="wqSubmitModal">上传作品</button>
+      </div>
+    </div>
+    <div class="wq-hero-visual">
+      <div class="wq-hero-frame">
+        <svg viewBox="0 0 720 540" role="img" aria-label="玩物社区女王品牌主视觉：藏家工作台上的玩偶展示架与灯光">
+          <defs>
+            <linearGradient id="wqHeroBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#221a3f"/>
+              <stop offset="55%" stop-color="#3b2d68"/>
+              <stop offset="100%" stop-color="#1a1430"/>
+            </linearGradient>
+            <linearGradient id="wqHeroGlow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ffd77a" stop-opacity=".85"/>
+              <stop offset="100%" stop-color="#ffd77a" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="wqShelf" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#6a55ab"/>
+              <stop offset="100%" stop-color="#463778"/>
+            </linearGradient>
+          </defs>
+          <rect width="720" height="540" fill="url(#wqHeroBg)"/>
+          <circle cx="118" cy="86" r="3" fill="#ffe7a8" opacity=".8"/>
+          <circle cx="612" cy="120" r="2.4" fill="#ffe7a8" opacity=".7"/>
+          <circle cx="520" cy="58" r="2" fill="#ffe7a8" opacity=".6"/>
+          <circle cx="196" cy="176" r="2" fill="#c9b6ff" opacity=".6"/>
+          <ellipse cx="360" cy="150" rx="230" ry="150" fill="url(#wqHeroGlow)" opacity=".28"/>
+          <rect x="92" y="120" width="536" height="8" rx="4" fill="url(#wqShelf)"/>
+          <rect x="92" y="268" width="536" height="8" rx="4" fill="url(#wqShelf)"/>
+          <rect x="92" y="402" width="536" height="8" rx="4" fill="url(#wqShelf)"/>
+          <g>
+            <rect x="132" y="150" width="58" height="118" rx="10" fill="#7a5cf0"/>
+            <circle cx="161" cy="186" r="17" fill="#ffe7a8"/>
+            <rect x="146" y="212" width="30" height="34" rx="8" fill="#f5c04a"/>
+            <rect x="120" y="242" width="82" height="26" rx="8" fill="#2c2350"/>
+          </g>
+          <g>
+            <rect x="216" y="182" width="64" height="86" rx="12" fill="#38c9a5"/>
+            <circle cx="248" cy="212" r="15" fill="#123b32"/>
+            <path d="M232 244h32l-6 24h-20z" fill="#0f2c26"/>
+          </g>
+          <g>
+            <circle cx="342" cy="196" r="34" fill="#f5c04a"/>
+            <circle cx="330" cy="190" r="5" fill="#221a3f"/>
+            <circle cx="354" cy="190" r="5" fill="#221a3f"/>
+            <path d="M332 210q10 9 20 0" stroke="#221a3f" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <rect x="318" y="230" width="48" height="38" rx="10" fill="#ff8fb1"/>
+          </g>
+          <g>
+            <rect x="410" y="164" width="72" height="104" rx="10" fill="#e9e3ff"/>
+            <rect x="424" y="182" width="44" height="48" rx="7" fill="#7a5cf0"/>
+            <rect x="432" y="240" width="28" height="8" rx="4" fill="#4a3b86"/>
+          </g>
+          <g>
+            <rect x="508" y="140" width="66" height="128" rx="12" fill="#ff8fb1"/>
+            <circle cx="541" cy="180" r="16" fill="#fff4d6"/>
+            <rect x="522" y="208" width="38" height="20" rx="6" fill="#c8325f"/>
+          </g>
+          <g>
+            <rect x="150" y="300" width="86" height="102" rx="10" fill="#2c2350" stroke="#7a5cf0" stroke-width="2"/>
+            <rect x="164" y="316" width="58" height="56" rx="6" fill="#38c9a5" opacity=".8"/>
+            <rect x="164" y="382" width="40" height="7" rx="3.5" fill="#ffe7a8"/>
+          </g>
+          <g>
+            <circle cx="300" cy="352" r="44" fill="#f5c04a"/>
+            <circle cx="300" cy="352" r="30" fill="#221a3f"/>
+            <path d="M300 332v20l14 10" stroke="#ffe7a8" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </g>
+          <g>
+            <rect x="392" y="310" width="96" height="92" rx="12" fill="#38c9a5"/>
+            <path d="M410 386l24-40 20 26 16-18v32z" fill="#0f2c26"/>
+            <circle cx="422" cy="332" r="9" fill="#ffe7a8"/>
+          </g>
+          <g>
+            <rect x="520" y="322" width="82" height="80" rx="10" fill="#7a5cf0"/>
+            <rect x="534" y="338" width="54" height="34" rx="6" fill="#ffe7a8"/>
+            <rect x="534" y="380" width="34" height="7" rx="3.5" fill="#e9e3ff"/>
+          </g>
+          <rect x="92" y="452" width="536" height="14" rx="7" fill="#140f26"/>
+          <rect x="92" y="452" width="536" height="6" rx="3" fill="#7a5cf0" opacity=".55"/>
+          <g opacity=".9">
+            <rect x="52" y="24" width="96" height="30" rx="15" fill="#ffe7a8"/>
+            <text x="100" y="44" text-anchor="middle" font-size="14" font-weight="800" fill="#221a3f" font-family="sans-serif">4K 原创</text>
+          </g>
+        </svg>
+        <span class="wq-play-badge" aria-hidden="true">▶</span>
+      </div>
+      <div class="wq-hero-badge"><span class="wq-dot"></span>本周新增 26 条精品内容 · 持续运营中</div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-feature">
+    <div class="wq-wrap">
+      <div class="wq-section-head">
+        <div>
+          <span class="wq-kicker">FEATURED · 焦点内容</span>
+          <h2>本周焦点：玩物社区女王的四部精选影像</h2>
+          <p>由平台编辑部与签约创作者共同挑选，覆盖开箱测评、藏品修复、人物访谈与城市淘物四条主线，均为原创正版高清内容。</p>
+        </div>
+        <a class="wq-btn wq-btn-ghost" href="#wq-review">查看口碑榜</a>
+      </div>
+
+      <div class="wq-feature">
+        <div class="wq-feature-cover">
+          <svg viewBox="0 0 640 360" role="img" aria-label="《玩物藏家的十二时辰》封面：深夜里亮着暖光的藏品展示柜">
+            <defs>
+              <linearGradient id="wqF1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#181228"/>
+                <stop offset="100%" stop-color="#3a2c62"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="360" fill="url(#wqF1)"/>
+            <rect x="54" y="44" width="238" height="272" rx="14" fill="#0f0b1c" stroke="#6b56b3" stroke-width="3"/>
+            <rect x="72" y="62" width="88" height="104" rx="8" fill="#ffd77a"/>
+            <rect x="176" y="62" width="98" height="104" rx="8" fill="#7a5cf0"/>
+            <rect x="72" y="184" width="202" height="8" rx="4" fill="#3c2f68"/>
+            <rect x="72" y="210" width="132" height="86" rx="8" fill="#38c9a5"/>
+            <circle cx="138" cy="252" r="22" fill="#0f2c26"/>
+            <rect x="222" y="210" width="52" height="86" rx="8" fill="#ff8fb1"/>
+            <g>
+              <circle cx="430" cy="140" r="66" fill="#241a41" stroke="#e8b64b" stroke-width="3"/>
+              <circle cx="430" cy="140" r="44" fill="#e8b64b"/>
+              <circle cx="430" cy="140" r="24" fill="#241a41"/>
+              <rect x="422" y="104" width="16" height="42" rx="8" fill="#fff2cf"/>
+            </g>
+            <rect x="352" y="240" width="232" height="12" rx="6" fill="#6b56b3"/>
+            <rect x="352" y="266" width="164" height="12" rx="6" fill="#3c2f68"/>
+            <rect x="352" y="292" width="196" height="12" rx="6" fill="#3c2f68"/>
+            <text x="430" y="322" text-anchor="middle" font-size="16" font-weight="800" fill="#ffe7a8" font-family="sans-serif">EP.08 · 4K 首发</text>
+          </svg>
+          <span class="wq-play-badge" aria-hidden="true">▶</span>
+        </div>
+        <div class="wq-feature-body">
+          <div>
+            <span class="wq-tag wq-tag-gold">开箱深度</span>
+            <span class="wq-tag">人物访谈</span>
+          </div>
+          <h3>玩物藏家的十二时辰：凌晨三点的展示柜灯光</h3>
+          <p>摄制组跟随三位藏家走过完整的一天，从早市淘物到深夜归柜，记录他们如何为一件玩偶调整灯位、擦拭灰尘、给每一格展架写标签。镜头克制，细节密实，是玩物社区女王本季最受好评的纪实作品。</p>
+          <div class="wq-meta-row">
+            <span>创作者 <b>阿橱的柜子</b></span>
+            <span>播放 <b>18.6 万</b></span>
+            <span>点赞 <b>9,240</b></span>
+            <span>收藏 <b>6,118</b></span>
+          </div>
+          <div class="wq-hero-actions" style="margin-top:4px">
+            <button class="wq-btn wq-btn-primary wq-act" data-like>♡ 点赞 <span data-like-count>9240</span></button>
+            <button class="wq-btn wq-btn-ghost wq-act" data-save>☆ 收藏</button>
+            <button class="wq-btn wq-btn-ghost" data-share>分享</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wq-vlist">
+        <div class="wq-vitem">
+          <div>
+            <h4>拆解一只旧搪胶：从掉漆到重生的 47 天</h4>
+            <p>修复师留存了每一步打磨与调色记录，附完整工序表与材料清单。</p>
+            <div><span class="wq-tag wq-tag-mint">教程干货</span><span class="wq-tag">手作修复</span></div>
+          </div>
+          <div class="wq-vitem-tail">
+            <span class="wq-meta-row"><span>播放 <b>11.2 万</b></span></span>
+            <button class="wq-act" data-like>♡ <span data-like-count>4120</span></button>
+            <button class="wq-act" data-save>☆ 收藏</button>
+            <button class="wq-act" data-copy>复制链接</button>
+          </div>
+        </div>
+        <div class="wq-vitem">
+          <div>
+            <h4>东京中野淘物地图：三条街与十二家店的实测</h4>
+            <p>城市探索特辑，含店铺营业时间、价格区间与砍价话术，适合第一次出行的藏家。</p>
+            <div><span class="wq-tag">城市探索</span><span class="wq-tag wq-tag-gold">攻略</span></div>
+          </div>
+          <div class="wq-vitem-tail">
+            <span class="wq-meta-row"><span>播放 <b>9.8 万</b></span></span>
+            <button class="wq-act" data-like>♡ <span data-like-count>3311</span></button>
+            <button class="wq-act" data-save>☆ 收藏</button>
+            <button class="wq-act" data-copy>复制链接</button>
+          </div>
+        </div>
+        <div class="wq-vitem">
+          <div>
+            <h4>她收藏了 400 只玩偶：一间出租屋的极限陈列</h4>
+            <p>人物访谈，聊预算管理、家人态度与“买之前先拍照”的自我约束方法。</p>
+            <div><span class="wq-tag">人物访谈</span><span class="wq-tag wq-tag-mint">生活记录</span></div>
+          </div>
+          <div class="wq-vitem-tail">
+            <span class="wq-meta-row"><span>播放 <b>15.4 万</b></span></span>
+            <button class="wq-act" data-like>♡ <span data-like-count>7802</span></button>
+            <button class="wq-act" data-save>☆ 收藏</button>
+            <button class="wq-act" data-copy>复制链接</button>
+          </div>
+        </div>
+        <div class="wq-vitem">
+          <div>
+            <h4>设计师的第一步：把草图变成可量产的玩物</h4>
+            <p>从打样、修模到小批量出货，完整走一遍原创玩物的商业化路径。</p>
+            <div><span class="wq-tag wq-tag-gold">创作幕后</span><span class="wq-tag">行业观察</span></div>
+          </div>
+          <div class="wq-vitem-tail">
+            <span class="wq-meta-row"><span>播放 <b>7.6 万</b></span></span>
+            <button class="wq-act" data-like>♡ <span data-like-count>2655</span></button>
+            <button class="wq-act" data-save>☆ 收藏</button>
+            <button class="wq-act" data-copy>复制链接</button>
+          </div>
+        </div>
+        <div class="wq-vitem">
+          <div>
+            <h4>开箱 30 只盲盒的隐藏款统计：概率是不是玄学</h4>
+            <p>用真实数据做了一次小规模统计，附表格与结论，评论区讨论火热。</p>
+            <div><span class="wq-tag">深度测评</span><span class="wq-tag wq-tag-mint">知识科普</span></div>
+          </div>
+          <div class="wq-vitem-tail">
+            <span class="wq-meta-row"><span>播放 <b>21.7 万</b></span></span>
+            <button class="wq-act" data-like>♡ <span data-like-count>11063</span></button>
+            <button class="wq-act" data-save>☆ 收藏</button>
+            <button class="wq-act" data-copy>复制链接</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-topic">
+    <div class="wq-wrap">
+      <div class="wq-topic-band">
+        <h2>专题企划：玩物社区女王的三个长期栏目</h2>
+        <p>我们不追热点，而是持续运营三条稳定栏目线。每一期由平台编辑部发起、社区创作者共创，选题从藏家真实困惑里长出来。所有内容均为原创正版，支持高清下载与二次创作授权申请。</p>
+        <div class="wq-topic-list">
+          <article>
+            <h3>藏家的一天</h3>
+            <p>跟随拍摄 12 位不同城市、不同预算的藏家，呈现玩物如何在日常空间里被安放。</p>
+            <ul>
+              <li>第 8 集：凌晨三点的展示柜灯光（已上线）</li>
+              <li>第 9 集：一间 12 平米出租屋的陈列术（制作中）</li>
+              <li>第 10 集：两个人的共同收藏计划（筹备中）</li>
+            </ul>
+          </article>
+          <article>
+            <h3>修复实验室</h3>
+            <p>联合修复师与材料供应商，公开可复用的修复流程，强调可逆与可追溯。</p>
+            <ul>
+              <li>搪胶掉漆重涂全流程（已上线）</li>
+              <li>软胶泛黄的温和处理方案（已上线）</li>
+              <li>纸盒压痕的蒸汽复原实验（更新中）</li>
+            </ul>
+          </article>
+          <article>
+            <h3>玩物面对面</h3>
+            <p>每期一场深度访谈，对象包括主理人、原型师、二手店主与普通藏家。</p>
+            <ul>
+              <li>对话原型师：一只脸的三十次修改（已上线）</li>
+              <li>二手店主：我如何判断一只玩物的价值（已上线）</li>
+              <li>普通藏家：月薪八千怎么玩（投票选题中）</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-authors">
+    <div class="wq-wrap">
+      <div class="wq-section-head">
+        <div>
+          <span class="wq-kicker">CREATORS · 创作者矩阵</span>
+          <h2>玩物社区女王的签约创作者</h2>
+          <p>他们来自收藏、修复、设计、影像与文字等不同背景，共同构成平台的内容生态基底。点击可查看其完整档案与合作方式。</p>
+        </div>
+      </div>
+
+      <div class="wq-author-grid">
+        <article class="wq-author">
+          <div class="wq-avatar" style="background:linear-gradient(140deg,#7a5cf0,#4a3b86)">橱</div>
+          <div>
+            <h3>阿橱的柜子 <span class="wq-author-role">首席内容官</span></h3>
+            <p>擅长把收藏这件事拍成安静的日常。做过五年家装摄影，习惯用自然光记录展柜，强调“先安放，再展示”。她的视频里几乎没有夸张音效，却总能让评论区聊到深夜。</p>
+            <div class="wq-author-stats"><span>作品 <b>168</b></span><span>粉丝 <b>12.6 万</b></span><span>领域 <b>陈列 · 纪实</b></span></div>
+            <a class="wq-author-more" href="#wq-authors" data-author="阿橱的柜子">查看档案 →</a>
+          </div>
+        </article>
+        <article class="wq-author">
+          <div class="wq-avatar" style="background:linear-gradient(140deg,#38c9a5,#187a61)">修</div>
+          <div>
+            <h3>老陈修复台 <span class="wq-author-role">技术顾问</span></h3>
+            <p>十五年模型与软胶修复经验，坚持“可逆修复”原则。他习惯在视频里保留失败镜头，并附上材料清单与安全提示。平台所有修复类教程，均需经过他的技术复核。</p>
+            <div class="wq-author-stats"><span>作品 <b>94</b></span><span>粉丝 <b>8.3 万</b></span><span>领域 <b>修复 · 教程</b></span></div>
+            <a class="wq-author-more" href="#wq-authors" data-author="老陈修复台">查看档案 →</a>
+          </div>
+        </article>
+        <article class="wq-author">
+          <div class="wq-avatar" style="background:linear-gradient(140deg,#e8b64b,#c2902a)">南</div>
+          <div>
+            <h3>南城淘物记 <span class="wq-author-role">城市探索</span></h3>
+            <p>常年在中野、旺角与城南旧货市场之间往返，擅长把逛店流程拆成可执行的路线。她的攻略视频会标注预算、营业时间与退换政策，被社区称为“出门前必看”。</p>
+            <div class="wq-author-stats"><span>作品 <b>121</b></span><span>粉丝 <b>10.1 万</b></span><span>领域 <b>城市 · 攻略</b></span></div>
+            <a class="wq-author-more" href="#wq-authors" data-author="南城淘物记">查看档案 →</a>
+          </div>
+        </article>
+        <article class="wq-author">
+          <div class="wq-avatar" style="background:linear-gradient(140deg,#ff8fb1,#c8325f)">七</div>
+          <div>
+            <h3>七号原型师 <span class="wq-author-role">设计师</span></h3>
+            <p>独立玩物设计师，做过三款小批量原创系列。她的幕后视频会完整展示草图、打样与修模的取舍过程，也乐于分享失败的模具和成本账，是平台最受欢迎的创作视角。</p>
+            <div class="wq-author-stats"><span>作品 <b>76</b></span><span>粉丝 <b>6.8 万</b></span><span>领域 <b>设计 · 幕后</b></span></div>
+            <a class="wq-author-more" href="#wq-authors" data-author="七号原型师">查看档案 →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-essay">
+    <div class="wq-wrap">
+      <div class="wq-essay">
+        <span class="wq-kicker" style="display:block;font-size:12px;font-weight:800;letter-spacing:.22em;color:var(--wq-gold-deep);margin-bottom:8px">BRAND · 品牌深度解析</span>
+        <h2>为什么玩物需要一个视频社区：玩物社区女王的品牌逻辑</h2>
+        <p>我们把“玩物”理解为一种持续的相处关系，而不是一次性的购买行为。玩物社区女王从成立第一天起，就把自己定位成这个关系里的记录者、组织者与服务者。</p>
+
+        <h3>从藏家的真实困惑出发：玩物社区女王的内容起点</h3>
+        <p>2019 年，团队只有四个人，在一间不到二十平米的工作室里拍第一批开箱视频。那时我们发现，藏家最缺的不是新货信息，而是可以对照的经验：这只有没有修复过？展柜灯该用多少色温？预算有限时先买哪一只？这些问题散落在论坛与聊天群里，却没有被系统地记录。于是我们决定用视频这种最直观的方式，把过程留下。第一期《擦一只旧玩偶要用几种布》只拍了七分钟，播放量不到三千，但评论区出现了四十多条具体补充，那是我们第一次感受到社区的力量，也确定了玩物社区女王的选题原则——从真实困惑出发，而不是从流量出发。</p>
+        <p>此后三年，平台逐步建立起选题评审机制。每条内容上线前，需要回答三个问题：它解决了什么具体问题？它是否可被复现？它有没有尊重物件与藏家本人？这套略显笨拙的流程，让我们在快速变化的行业里保持了稳定的口碑。截至今天，玩物社区女王累计上线原创高清视频超过一千二百条，其中修复与教程类内容占比接近三成，全部附带材料清单与安全提示。</p>
+
+        <h3>内容生态如何运转：创作者、企业与社区的三方协作</h3>
+        <p>一个健康的视频品牌官网，不能只靠编辑部供稿。我们把内容生态拆成三层：第一层是签约创作者，他们提供专业深度与稳定更新；第二层是企业与品牌伙伴，提供材料、工具与真实的生产现场；第三层是社区用户，他们用评论、投稿和投票决定下一期拍什么。三层之间不是简单的供需关系，而是彼此校验。比如修复实验室的每一期教程，都会先由老陈修复台完成实操，再交由品牌伙伴复核材料安全性，最后由社区用户投票决定是否值得做成系列。</p>
+        <p>为了让这种协作可持续，平台设立了创作激励与内容复核双轨机制。激励侧，我们按完播率、收藏率与复现反馈综合结算，而不是单看播放量；复核侧，所有涉及安全、材料与版权的内容，必须经过至少两位专业顾问审阅。我们相信，只有把“专业”落在流程里，行业领先才不是一句口号。目前平台签约创作者 138 位，合作品牌 24 家，社区注册用户 52.4 万，这些数字背后是一个持续运营、彼此信任的内容生态。</p>
+
+        <h3>品质与责任：玩物社区女王的长期主义</h3>
+        <p>玩物内容天然带着消费属性，因此我们格外警惕过度鼓吹。平台明确要求：开箱类内容不得隐瞒价格，测评类内容不得使用未标注的推广，涉及二手交易的视频必须提示风险。我们还与几家二手店合作推出“可追溯标签”，在视频里公开物件的来源与修复记录。这些做法并不讨巧，甚至会让部分内容看起来不够“爽”，但它们让玩物社区女王成为用户心中值得信赖的参考来源。</p>
+        <p>长期主义还体现在对创作者的陪伴上。我们不鼓励创作者为追热点牺牲生活，而是提供选题库、拍摄支持与心理疏导。过去两年，平台有 11 位创作者从兼职走向全职，也有 3 位在调整节奏后重新回到社区。我们始终认为，一个视频品牌的真正资产，是那些愿意持续表达的人。玩物社区女王希望成为他们的长期伙伴，而不是一次性的流量通道。</p>
+        <div class="wq-quote">“玩物不是逃避现实，而是练习如何认真对待一件小事。”——这是我们在内部反复引用的一句话，也是品牌故事的底色。未来一年，玩物社区女王将继续深耕垂直领域，把原创、正版、高清与专业做成可被检验的日常。</div>
+
+        <h3>面向未来的三个方向：官方发布与社区共建</h3>
+        <p>接下来，平台会围绕三个方向持续投入。其一是内容标准化：建立修复、测评与访谈三类内容的制作手册，向所有创作者开放。其二是社区工具：上线藏品记录与拍摄排期功能，帮助藏家管理自己的玩物档案。其三是线下连接：与城市空间合作举办小型放映与交换活动，让屏幕里的关系走到现实。我们也会在每个季度发布企业动态与更新日志，把平台的进展、失误与调整都摊开讲清楚。</p>
+        <p>如果你也相信玩物值得被认真记录，欢迎在玩物社区女王上传你的第一条视频。无论是一段三十秒的拆盒，还是一部四十分钟的修复长片，只要真实、具体、有细节，就值得被看见。这就是我们理解的品牌责任，也是社区能一直热闹下去的原因。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-review">
+    <div class="wq-wrap">
+      <div class="wq-section-head">
+        <div>
+          <span class="wq-kicker">VOICE · 用户口碑</span>
+          <h2>社区里的真实评价</h2>
+          <p>来自不同城市、不同入坑年限的藏家与创作者。我们保留原始语气，不做美化。</p>
+        </div>
+        <button class="wq-btn wq-btn-ghost" data-modal="wqSubmitModal">我也想说两句</button>
+      </div>
+
+      <div class="wq-review-grid">
+        <article class="wq-review">
+          <div class="wq-review-head"><span class="wq-avatar" style="width:36px;height:36px;font-size:14px;background:linear-gradient(140deg,#7a5cf0,#4a3b86)">林</span><span class="wq-review-name">林间小柜</span><span class="wq-review-stars">★★★★★</span></div>
+          <p>看《藏家的一天》第八集看哭了。我家也是那种一进门就要侧身走的陈列，家人一直不理解，但视频里那句“先安放，再展示”让我觉得被看见了。希望多拍普通人的柜子。</p>
+          <span class="wq-review-topic">关于《玩物藏家的十二时辰》</span>
+        </article>
+        <article class="wq-review">
+          <div class="wq-review-head"><span class="wq-avatar" style="width:36px;height:36px;font-size:14px;background:linear-gradient(140deg,#38c9a5,#187a61)">K</span><span class="wq-review-name">Kiko_修</span><span class="wq-review-stars">★★★★☆</span></div>
+          <p>修复教程是我见过最实在的，材料清单直接给，失败镜头也不剪。唯一建议：能不能把安全提示放到视频前五秒，我上次边看边操作差点把溶剂洒了。</p>
+          <span class="wq-review-topic">关于《修复实验室》</span>
+        </article>
+        <article class="wq-review">
+          <div class="wq-review-head"><span class="wq-avatar" style="width:36px;height:36px;font-size:14px;background:linear-gradient(140deg,#e8b64b,#c2902a)">慢</span><span class="wq-review-name">慢慢淘</span><span class="wq-review-stars">★★★★★</span></div>
+          <p>按南城的东京地图走了一遍，命中率很高。价格区间写得很克制，没有那种“必买”的煽动感，这点我特别欣赏。已经安利给三个朋友。</p>
+          <span class="wq-review-topic">关于《东京中野淘物地图》</span>
+        </article>
+        <article class="wq-review">
+          <div class="wq-review-head"><span class="wq-avatar" style="width:36px;height:36px;font-size:14px;background:linear-gradient(140deg,#ff8fb1,#c8325f)">盒</span><span class="wq-review-name">盒子里有猫</span><span class="wq-review-stars">★★★★☆</span></div>
+          <p>盲盒概率那期数据做得不错，但样本还是偏小。我照着自己的记录补充了一下，结论方向一致。建议平台做一个开放的数据提交入口，大家一起统计。</p>
+          <span class="wq-review-topic">关于《30 只盲盒的隐藏款统计》</span>
+        </article>
+        <article class="wq-review">
+          <div class="wq-review-head"><span class="wq-avatar" style="width:36px;height:36px;font-size:14px;background:linear-gradient(140deg,#7a5cf0,#38c9a5)">周</span><span class="wq-review-name">周末不加班</span><span class="wq-review-stars">★★★★★</span></div>
+          <p>投稿流程比想象中简单，上传后第三天就收到编辑的修改建议，不是那种敷衍的模板回复。虽然最后没上精选，但那次沟通让我对这个平台有了信任。</p>
+          <span class="wq-review-topic">关于投稿体验</span>
+        </article>
+        <article class="wq-review">
+          <div class="wq-review-head"><span class="wq-avatar" style="width:36px;height:36px;font-size:14px;background:linear-gradient(140deg,#4a3b86,#e8b64b)">陈</span><span class="wq-review-name">陈年旧塑</span><span class="wq-review-stars">★★★☆☆</span></div>
+          <p>内容品质整体不错，但更新节奏最近有点慢，修复栏目等了三周。理解制作周期，还是希望有个明确的更新日历，不然容易错过。</p>
+          <span class="wq-review-topic">关于更新频率</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-faq">
+    <div class="wq-wrap">
+      <div class="wq-section-head">
+        <div>
+          <span class="wq-kicker">HELP · 帮助中心</span>
+          <h2>关于玩物社区女王的常见问题</h2>
+          <p>投稿、观看、版权与社区规则，这里先给出最直接的回答。</p>
+        </div>
+      </div>
+
+      <div class="wq-faq">
+        <details>
+          <summary>如何向玩物社区女王投稿？需要什么条件？</summary>
+          <p>点击页头或页脚的“投稿入口”，填写作品标题、简介与联系方式即可。我们接受开箱、测评、教程、访谈、城市探索等与玩物相关的原创视频，时长建议 1 至 40 分钟。初审通常在三个工作日内完成，通过后会由编辑对接修改与上线排期。请确保作品为原创，且不侵犯他人肖像权与著作权。</p>
+        </details>
+        <details>
+          <summary>平台上的视频可以下载或二次使用吗？</summary>
+          <p>平台视频默认支持在线高清观看。若需下载或二次创作，请在视频详情页提交授权申请，说明用途与发布渠道。经创作者与平台共同确认后，我们会提供正版素材包与署名规范。未经授权的搬运、剪辑与商业使用，平台将协助创作者维权。</p>
+        </details>
+        <details>
+          <summary>“玩物口碑榜”是怎么评选的？</summary>
+          <p>口碑榜由社区投票、收藏率、复现反馈与专业顾问评分四部分构成，权重分别为 35%、25%、20% 与 20%。投票周期为每年第四季度，结果在官方发布页面公示。我们设置了反刷票机制，异常数据会被剔除，评选过程接受社区监督。</p>
+        </details>
+        <details>
+          <summary>我是品牌方，想和平台合作该怎么联系？</summary>
+          <p>欢迎通过页脚的合作邮箱联系我们，说明品牌背景、合作形式与预算范围。平台只接受与玩物、手作、材料、工具相关的合作，并会在相关内容中明确标注合作信息。我们更倾向长期栏目共建，而非一次性植入。</p>
+        </details>
+        <details>
+          <summary>收藏和点赞的数据会公开吗？</summary>
+          <p>点赞与收藏是公开的互动数据，用于反映内容热度。具体到个人账号的收藏夹内容属于私密信息，不会对外展示。你可以随时在个人设置里清空收藏记录。</p>
+        </details>
+        <details>
+          <summary>如何参与“女王创作挑战赛”？</summary>
+          <p>每季挑战赛会在公告条与专题页同步开启报名，通常持续四周。参赛者需提交一条符合当期主题的原创视频，并在标题中标注挑战赛标签。评选综合完播、互动与顾问评分，获奖作品会获得平台推荐位与创作基金支持。第三季主题为“我的第一只玩物”。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="wq-section" id="wq-updates">
+    <div class="wq-wrap">
+      <div class="wq-section-head">
+        <div>
+          <span class="wq-kicker">DYNAMICS · 企业动态</span>
+          <h2>官方发布与平台更新</h2>
+          <p>把进展、调整与失误都写进更新日志，是我们对社区的基本承诺。</p>
+        </div>
+      </div>
+      <div class="wq-grid-2">
+        <ul class="wq-log">
+          <li>
+            <b>2026 年 11 月 18 日 · 修复实验室第二季开播</b>
+            <p>新增材料安全复核环节，每期教程附带可下载的工序表与风险提示卡。</p>
+          </li>
+          <li>
+            <b>2026 年 11 月 10 日 · 口碑榜投票通道上线</b>
+            <p>本届共 42 条作品入围，投票将持续至 12 月 5 日，结果于 12 月中旬公布。</p>
+          </li>
+          <li>
+            <b>2026 年 10 月 29 日 · 创作挑战赛第三季启动</b>
+            <p>主题“我的第一只玩物”，报名与作品提交同步开放，预计 12 月初完成评审。</p>
+          </li>
+        </ul>
+        <div class="wq-card" style="display:flex;flex-direction:column;justify-content:center;gap:12px">
+          <h3 style="font-size:18px">合作品牌与伙伴</h3>
+          <div class="wq-partner-grid" style="grid-template-columns:1fr">
+            <div class="wq-partner"><span class="wq-partner-logo" style="background:#7a5cf0">塑</span><div><b>塑言材料</b><span>修复材料供应</span></div></div>
+            <div class="wq-partner"><span class="wq-partner-logo" style="background:#38c9a5">柜</span><div><b>柜见家居</b><span>展柜与灯光方案</span></div></div>
+            <div class="wq-partner"><span class="wq-partner-logo" style="background:#e8b64b">旧</span><div><b>旧物新语</b><span>二手交易与鉴定</span></div></div>
+          </div>
+          <p style="font-size:13px;color:var(--wq-mute);margin-top:4px">以上合作均明确标注，平台不接受未披露的商业推广。合作咨询请通过页脚邮箱联系。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wq-footer" id="wq-footer">
+  <div class="wq-footer-inner">
+    <div class="wq-footer-top">
+      <div class="wq-footer-brand">
+        <span class="wq-brand-name" style="font-size:18px;font-weight:900">玩物社区女王</span>
+        <p>玩物社区女王官方网站，专注潮流玩物与收藏文化的原创高清视频平台。我们深耕垂直领域，与创作者、企业与藏家一起，持续运营值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="#wq-feature">精选视频</a></li>
+          <li><a href="#wq-topic">专题企划</a></li>
+          <li><a href="#wq-authors">创作者矩阵</a></li>
+          <li><a href="#wq-review">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#wq-updates">企业动态</a></li>
+          <li><a href="#wq-faq">帮助中心</a></li>
+          <li><a href="#wq-hero" data-modal="wqSubmitModal">投稿入口</a></li>
+          <li><a href="#wq-essay">品牌解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <ul>
+          <li><a href="#wq-footer">合作邮箱：partner@wanwuqueen.example</a></li>
+          <li><a href="#wq-footer">内容授权：license@wanwuqueen.example</a></li>
+          <li><a href="#wq-footer">社区规范与版权说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wq-footer-bottom">
+      <span>© 2026 玩物社区女王 官方网站 · 版权所有 · 持续运营中</span>
+      <span>原创正版内容平台 · 高清专业 · 用户至上 · 匠心陪伴</span>
+    </div>
+  </div>
+</footer>
+
+<div class="wq-toast" id="wqToast" role="status" aria-live="polite"></div>
+
+<div class="wq-top-btn" id="wqTopBtn" aria-label="回到顶部">↑</div>
+
+<div class="wq-modal" id="wqSubmitModal" role="dialog" aria-modal="true" aria-labelledby="wqSubmitTitle">
+  <div class="wq-modal-box">
+    <button class="wq-modal-close" data-close aria-label="关闭">×</button>
+    <h3 id="wqSubmitTitle">向玩物社区女王投稿</h3>
+    <p>填写基本信息，编辑会在三个工作日内与你联系。请确保作品为原创正版，且不侵犯他人权益。</p>
+    <label for="wqSubmitName">创作者昵称</label>
+    <input id="wqSubmitName" type="text" placeholder="例如：阿橱的柜子">
+    <label for="wqSubmitTitleInput">作品标题</label>
+    <input id="wqSubmitTitleInput" type="text" placeholder="例如：我的第一只玩物">
+    <label for="wqSubmitDesc">作品简介</label>
+    <textarea id="wqSubmitDesc" placeholder="简单描述内容方向、时长与拍摄方式"></textarea>
+    <button class="wq-submit-btn" id="wqSubmitBtn">提交投稿</button>
+  </div>
+</div>
+
+<div class="wq-modal" id="wqAuthorModal" role="dialog" aria-modal="true" aria-labelledby="wqAuthorTitle">
+  <div class="wq-modal-box">
+    <button class="wq-modal-close" data-close aria-label="关闭">×</button>
+    <h3 id="wqAuthorTitle">创作者档案</h3>
+    <p id="wqAuthorBody">加载中……</p>
+    <button class="wq-submit-btn" data-close>知道了</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* mobile nav */
+  var navToggle = document.getElementById("wqNavToggle");
+  var nav = document.getElementById("wqNav");
+  if(navToggle && nav){
+    navToggle.addEventListener("click", function(){
+      var open = nav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.textContent = open ? "✕" : "☰";
+    });
+    nav.addEventListener("click", function(e){
+      if(e.target.tagName === "A"){
+        nav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded","false");
+        navToggle.textContent = "☰";
+      }
+    });
+  }
+
+  /* toast */
+  var toast = document.getElementById("wqToast");
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("is-on"); }, 2200);
+  }
+
+  /* search feedback */
+  var searchForm = document.getElementById("wqSearchForm");
+  var searchInput = document.getElementById("wqSearchInput");
+  var searchTip = document.getElementById("wqSearchTip");
+  function runSearch(){
+    var val = (searchInput && searchInput.value || "").trim();
+    if(!searchTip || !searchTip.firstElementChild) return;
+    if(!val){
+      searchTip.classList.remove("is-on");
+      return;
+    }
+    searchTip.classList.add("is-on");
+    searchTip.firstElementChild.textContent = "已为你在玩物社区女王范围内检索“" + val + "”，共匹配到 12 条视频、3 位创作者与 1 个专题。";
+  }
+  if(searchForm){
+    searchForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      runSearch();
+    });
+  }
+  if(searchInput){
+    searchInput.addEventListener("input", function(){
+      if(!searchInput.value.trim() && searchTip) searchTip.classList.remove("is-on");
+    });
+  }
+
+  /* like / save / copy */
+  document.addEventListener("click", function(e){
+    var likeBtn = e.target.closest("[data-like]");
+    if(likeBtn){
+      var countEl = likeBtn.querySelector("[data-like-count]");
+      var liked = likeBtn.classList.toggle("is-liked");
+      if(countEl){
+        var num = parseInt(countEl.textContent.replace(/,/g,""),10) || 0;
+        num = liked ? num + 1 : Math.max(0, num - 1);
+        countEl.textContent = num.toLocaleString("en-US");
+      }
+      likeBtn.innerHTML = (liked ? "♥ 已赞 " : "♡ 点赞 ") + (countEl ? '<span data-like-count>' + countEl.textContent + '</span>' : '');
+      return;
+    }
+
+    var saveBtn = e.target.closest("[data-save]");
+    if(saveBtn){
+      var saved = saveBtn.classList.toggle("is-saved");
+      if(saveBtn.classList.contains("wq-btn")){
+        saveBtn.textContent = saved ? "★ 已收藏" : "☆ 收藏";
+      }
+      showToast(saved ? "已加入你的收藏夹" : "已取消收藏");
+      return;
+    }
+
+    var copyBtn = e.target.closest("[data-copy]");
+    if(copyBtn){
+      var fakeLink = "玩物社区女王 · 精选视频链接";
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(fakeLink).then(function(){
+          showToast("链接已复制，快去分享给同好");
+        }).catch(function(){
+          showToast("复制失败，请手动选择文本");
+        });
+      }else{
+        showToast("链接已准备好：玩物社区女王 · 精选视频");
+      }
+      return;
+    }
+
+    var shareBtn = e.target.closest("[data-share]");
+    if(shareBtn){
+      showToast("已生成分享卡片，可发送至微信、微博或社区站内");
+      return;
+    }
+
+    var authorLink = e.target.closest("[data-author]");
+    if(authorLink){
+      e.preventDefault();
+      var name = authorLink.getAttribute("data-author");
+      var authorModal = document.getElementById("wqAuthorModal");
+      var titleEl = document.getElementById("wqAuthorTitle");
+      var bodyEl = document.getElementById("wqAuthorBody");
+      var map = {
+        "阿橱的柜子": "阿橱的柜子，玩物社区女王首席内容官，签约 4 年。擅长陈列纪实与自然光拍摄，作品 168 条，粉丝 12.6 万。代表栏目《藏家的一天》《柜前十分钟》。合作请通过页脚邮箱联系编辑部转接。",
+        "老陈修复台": "老陈修复台，平台技术顾问，十五年模型与软胶修复经验。坚持可逆修复与材料披露，作品 94 条，粉丝 8.3 万。所有修复教程均经其技术复核。",
+        "南城淘物记": "南城淘物记，城市探索创作者，常年往返中野、旺角与城南旧货市场。作品 121 条，粉丝 10.1 万。擅长把逛店流程拆解为可执行路线与预算表。",
+        "七号原型师": "七号原型师，独立玩物设计师，做过三款小批量原创系列。作品 76 条，粉丝 6.8 万。幕后视频完整展示草图、打样与成本账，是平台最受欢迎的创作视角。"
+      };
+      if(titleEl) titleEl.textContent = name + " · 创作者档案";
+      if(bodyEl) bodyEl.textContent = map[name] || "该创作者的完整档案正在整理中，稍后开放查看。";
+      if(authorModal) authorModal.classList.add("is-on");
+      return;
+    }
+  });
+
+  /* modal generic */
+  document.addEventListener("click", function(e){
+    var openBtn = e.target.closest("[data-modal]");
+    if(openBtn){
+      e.preventDefault();
+      var modal = document.getElementById(openBtn.getAttribute("data-modal"));
+      if(modal) modal.classList.add("is-on");
+      return;
+    }
+    var closeBtn = e.target.closest("[data-close]");
+    if(closeBtn){
+      var box = closeBtn.closest(".wq-modal");
+      if(box) box.classList.remove("is-on");
+      return;
+    }
+    if(e.target.classList && e.target.classList.contains("wq-modal")){
+      e.target.classList.remove("is-on");
+    }
+  });
+
+  /* submit */
+  var submitBtn = document.getElementById("wqSubmitBtn");
+  if(submitBtn){
+    submitBtn.addEventListener("click", function(){
+      var nameEl = document.getElementById("wqSubmitName");
+      var titleEl = document.getElementById("wqSubmitTitleInput");
+      if(!nameEl || !titleEl || !nameEl.value.trim() || !titleEl.value.trim()){
+        showToast("请先填写创作者昵称与作品标题");
+        return;
+      }
+      var modal = document.getElementById("wqSubmitModal");
+      if(modal) modal.classList.remove("is-on");
+      showToast("投稿已提交，编辑会在三个工作日内联系你");
+      nameEl.value = "";
+      titleEl.value = "";
+      var descEl = document.getElementById("wqSubmitDesc");
+      if(descEl) descEl.value = "";
+    });
+  }
+
+  /* back to top */
+  var topBtn = document.getElementById("wqTopBtn");
+  window.addEventListener("scroll", function(){
+    if(!topBtn) return;
+    if(window.scrollY > 520){
+      topBtn.classList.add("is-on");
+    }else{
+      topBtn.classList.remove("is-on");
+    }
+  }, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+})();
+</script>
+</body>
+  </html>
